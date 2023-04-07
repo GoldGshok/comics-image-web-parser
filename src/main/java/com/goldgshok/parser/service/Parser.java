@@ -44,7 +44,7 @@ public class Parser {
                     --page;
                 }
             }
-            log.info("End loads");
+            log.debug("End loads");
         }
     }
 
