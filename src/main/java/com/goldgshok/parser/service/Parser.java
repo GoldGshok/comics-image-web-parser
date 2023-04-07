@@ -79,7 +79,7 @@ public class Parser {
 
         try (var readableByteChannel = Channels.newChannel(new URL(url).openStream());
                 var fileOutputStream = new FileOutputStream(fileName)) {
-            FileChannel fileChannel = fileOutputStream.getChannel();
+            var fileChannel = fileOutputStream.getChannel();
             fileChannel.transferFrom(readableByteChannel, 0, Long.MAX_VALUE);
         } catch (IOException e) {
             log.error("Can't save file: {}", fileName, e);
