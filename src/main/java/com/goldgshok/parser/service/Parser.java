@@ -17,7 +17,7 @@ import java.nio.channels.Channels;
 public class Parser {
 
     public void downloadImages(ParameterRequest request) {
-        log.info("Start load comics");
+        log.debug("Start load comics");
         var additionalPage = request.getStartAdditionalNumber();
         for (var page = request.getStartPageNumber(); page < request.getEndPageNumber(); page++) {
             var url = getUrl(request, page, additionalPage);
