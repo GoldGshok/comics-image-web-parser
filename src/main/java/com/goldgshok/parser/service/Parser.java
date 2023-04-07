@@ -32,7 +32,7 @@ public class Parser {
                     throw new RuntimeException("No elements");
                 }
                 String folder = createAndGetComicsDirectory(page);
-                for (Element element : elements) {
+                for (var element : elements) {
                     var images = element.getElementsByTag("img");
                     for (Element image : images) {
                         String path = image.attr("data-alternative");
