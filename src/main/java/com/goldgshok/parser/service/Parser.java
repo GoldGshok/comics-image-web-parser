@@ -33,7 +33,7 @@ public class Parser {
                 }
                 String folder = createAndGetComicsDirectory(page);
                 for (Element element : elements) {
-                    Elements images = element.getElementsByTag("img");
+                    var images = element.getElementsByTag("img");
                     for (Element image : images) {
                         String path = image.attr("data-alternative");
                         String fileName = image.attr("id");
