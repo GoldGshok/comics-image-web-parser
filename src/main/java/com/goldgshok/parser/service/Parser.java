@@ -35,7 +35,7 @@ public class Parser {
                 for (var element : elements) {
                     var images = element.getElementsByTag("img");
                     for (Element image : images) {
-                        String path = image.attr("data-alternative");
+                        var path = image.attr("data-alternative");
                         String fileName = image.attr("id");
                         saveImage(path, folder, fileName);
                         log.info("path: {}, page: {}", path, fileName);
