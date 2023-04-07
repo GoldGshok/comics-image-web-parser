@@ -77,7 +77,7 @@ public class Parser {
     private void saveImage(String url, String folder, String fileName) {
         fileName = String.format("%s/%s.%s", folder, fileName, url.substring(url.length() - 3));
 
-        try (ReadableByteChannel readableByteChannel = Channels.newChannel(new URL(url).openStream());
+        try (var readableByteChannel = Channels.newChannel(new URL(url).openStream());
                 FileOutputStream fileOutputStream = new FileOutputStream(fileName)) {
             FileChannel fileChannel = fileOutputStream.getChannel();
             fileChannel.transferFrom(readableByteChannel, 0, Long.MAX_VALUE);
