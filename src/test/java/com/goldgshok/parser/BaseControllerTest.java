@@ -1,7 +1,7 @@
 package com.goldgshok.parser;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.goldgshok.converter.app.Main;
+import com.goldgshok.parser.app.Main;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
