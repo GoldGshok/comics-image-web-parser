@@ -53,7 +53,7 @@ public class Parser {
     }
 
     private String getUrl(ParameterRequest request, Integer page, Integer additionalPage) {
-        String url = request.getUrl();
+        var url = request.getUrl();
         if (request.getTemplateURI().isEmpty()) {
             url = String.format(url, page);
         } else {
