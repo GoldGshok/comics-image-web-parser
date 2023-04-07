@@ -23,7 +23,7 @@ public class Parser {
     public void downloadImages(ParameterRequest request) {
         log.info("Start load comics");
         Integer additionalPage = request.getStartAdditionalNumber();
-        for (int page = request.getStartPageNumber(); page < request.getEndPageNumber(); page++) {
+        for (var page = request.getStartPageNumber(); page < request.getEndPageNumber(); page++) {
             String url = getUrl(request, page, additionalPage);
             try {
                 var doc = Jsoup.connect(url).get();
