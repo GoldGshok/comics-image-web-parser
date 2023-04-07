@@ -68,7 +68,6 @@ class ParserControllerTest extends BaseControllerTest {
         var request = new ParameterRequest();
         request.setUrl("123");
         request.setStartPageNumber(1);
-        request.setEndPageNumber(2);
         request.setDivName("div");
 
         var result = makeRequest("/api/parser/download", null);
@@ -77,4 +76,16 @@ class ParserControllerTest extends BaseControllerTest {
         verifyNoInteractions(parser);
     }
 
+    @Test
+    void convert_emptyDivName_throwException() throws Exception {
+        var request = new ParameterRequest();
+        request.setUrl("123");
+        request.setStartPageNumber(1);
+        request.setEndPageNumber(2);
+
+        var result = makeRequest("/api/parser/download", null);
+        result.andExpect(status().is4xxClientError());
+
+        verifyNoInteractions(parser);
+    }
 }
