@@ -38,7 +38,7 @@ public class Parser {
                     }
                 }
             } catch (Exception e) {
-                log.info("Can't load for page {}. {}", page, e.getMessage());
+                log.warn("Can't load for page {}. {}", page, e.getMessage());
                 if (additionalPage != null && additionalPage < request.getEndAdditionalNumber()) {
                     additionalPage++;
                     --page;
