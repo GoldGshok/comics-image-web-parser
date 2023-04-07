@@ -65,7 +65,7 @@ public class Parser {
         var folder = String.format("%d", page);
         var file = new File(folder);
         if (file.mkdir()) {
-            log.info("Folder {} is created", folder);
+            log.debug("Folder {} is created", folder);
         }
         return folder;
     }
