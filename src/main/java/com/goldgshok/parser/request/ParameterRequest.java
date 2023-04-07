@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 public class ParameterRequest {
 
-    @Schema(description = "URL сайта", example = "https://mangapoisk.ru/manga/attack-on-titan-2/chapter/%s", required = true)
+    @Schema(description = "URL сайта", example = "https://mangapoisk.ru/manga/attack-on-titan-2/chapter/%s", requiredMode = Schema.RequiredMode.REQUIRED)
     private String url;
     @Schema(description = "Начальная страница для поиска картинок", example = "100", required = true)
     private Integer startPageNumber;
