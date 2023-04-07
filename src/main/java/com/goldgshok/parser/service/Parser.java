@@ -31,7 +31,7 @@ public class Parser {
                 if (elements.isEmpty()) {
                     throw new RuntimeException("No elements");
                 }
-                String folder = createAndGetComicsDirectory(page);
+                var folder = createAndGetComicsDirectory(page);
                 for (var element : elements) {
                     var images = element.getElementsByTag("img");
                     for (Element image : images) {
