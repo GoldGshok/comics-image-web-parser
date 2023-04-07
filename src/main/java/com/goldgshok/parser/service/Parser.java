@@ -58,7 +58,7 @@ public class Parser {
             url = String.format(url, page);
         } else {
             if (additionalPage != null) {
-                String template = String.format(request.getTemplateURI(), additionalPage, page);
+                var template = String.format(request.getTemplateURI(), additionalPage, page);
                 url = String.format(url, template);
             }
         }
