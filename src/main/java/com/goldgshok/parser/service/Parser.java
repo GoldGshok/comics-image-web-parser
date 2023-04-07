@@ -67,7 +67,7 @@ public class Parser {
 
     private String createAndGetComicsDirectory(int page) {
         var folder = String.format("%d", page);
-        File file = new File(folder);
+        var file = new File(folder);
         if (file.mkdir()) {
             log.info("Folder {} is created", folder);
         }
