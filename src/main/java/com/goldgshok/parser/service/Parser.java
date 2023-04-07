@@ -26,7 +26,7 @@ public class Parser {
         for (int page = request.getStartPageNumber(); page < request.getEndPageNumber(); page++) {
             String url = getUrl(request, page, additionalPage);
             try {
-                Document doc = Jsoup.connect(url).get();
+                var doc = Jsoup.connect(url).get();
                 Elements elements = doc.getElementsByClass(request.getDivName());
                 if (elements.isEmpty()) {
                     throw new RuntimeException("No elements");
