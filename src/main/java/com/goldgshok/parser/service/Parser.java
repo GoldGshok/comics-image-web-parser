@@ -78,7 +78,7 @@ public class Parser {
         fileName = String.format("%s/%s.%s", folder, fileName, url.substring(url.length() - 3));
 
         try (var readableByteChannel = Channels.newChannel(new URL(url).openStream());
-                FileOutputStream fileOutputStream = new FileOutputStream(fileName)) {
+                var fileOutputStream = new FileOutputStream(fileName)) {
             FileChannel fileChannel = fileOutputStream.getChannel();
             fileChannel.transferFrom(readableByteChannel, 0, Long.MAX_VALUE);
         } catch (IOException e) {
