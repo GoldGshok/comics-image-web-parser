@@ -22,7 +22,7 @@ public class Parser {
 
     public void downloadImages(ParameterRequest request) {
         log.info("Start load comics");
-        Integer additionalPage = request.getStartAdditionalNumber();
+        var additionalPage = request.getStartAdditionalNumber();
         for (var page = request.getStartPageNumber(); page < request.getEndPageNumber(); page++) {
             String url = getUrl(request, page, additionalPage);
             try {
