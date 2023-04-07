@@ -34,7 +34,7 @@ public class Parser {
                         var path = image.attr("data-alternative");
                         var fileName = image.attr("id");
                         saveImage(path, folder, fileName);
-                        log.info("path: {}, page: {}", path, fileName);
+                        log.debug("path: {}, page: {}", path, fileName);
                     }
                 }
             } catch (Exception e) {
