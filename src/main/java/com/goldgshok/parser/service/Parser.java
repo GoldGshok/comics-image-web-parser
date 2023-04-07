@@ -24,7 +24,7 @@ public class Parser {
         log.info("Start load comics");
         var additionalPage = request.getStartAdditionalNumber();
         for (var page = request.getStartPageNumber(); page < request.getEndPageNumber(); page++) {
-            String url = getUrl(request, page, additionalPage);
+            var url = getUrl(request, page, additionalPage);
             try {
                 var doc = Jsoup.connect(url).get();
                 var elements = doc.getElementsByClass(request.getDivName());
