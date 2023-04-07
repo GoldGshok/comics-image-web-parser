@@ -12,7 +12,7 @@ public class ParameterRequest {
     private Integer startPageNumber;
     @Schema(description = "Конечная страница для поиска картинок", example = "139", requiredMode = Schema.RequiredMode.REQUIRED)
     private Integer endPageNumber;
-    @Schema(description = "div-блок в котором находятся картинки", example = "mt-1 d-flex flex-column align-items-center chapter-images", required = true)
+    @Schema(description = "div-блок в котором находятся картинки", example = "mt-1 d-flex flex-column align-items-center chapter-images", requiredMode = Schema.RequiredMode.REQUIRED)
     private String divName;
 
     @Schema(description = "Шаблон листания страниц, добавляется к url сайта", example = "%s-%s")
